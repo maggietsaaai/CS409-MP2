@@ -130,7 +130,7 @@ export function TracksProvider({ children }: { children: ReactNode }) {
           { headers, params: { limit: 50 } }
         );
         for (const { track } of recentResponse.data.items) {
-          if (!trackMap.has(track.id)) trackMap.set(track.id, track);
+          // if (!trackMap.has(track.id)) trackMap.set(track.id, track);
           const current = stats[track.id] ?? { ms: 0, plays: 0 };
           stats[track.id] = {
             ms: current.ms + track.duration_ms,
