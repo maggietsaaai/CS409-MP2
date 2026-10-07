@@ -72,7 +72,7 @@
 
 .navLink:global(.active) {
   color: var(--ink);
-  border-bottom-color: var(--ink);
+  border-bottom-color: var(--stamp);
 }
 
 .actions {

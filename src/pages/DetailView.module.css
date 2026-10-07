@@ -148,8 +148,9 @@
 }
 
 .pagerButton:hover:not(:disabled) {
-  background: var(--ink);
+  background: var(--stamp);
   color: var(--paper);
+  border-color: var(--stamp);
 }
 
 .pagerButton:disabled {

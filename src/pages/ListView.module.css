@@ -181,3 +181,5 @@
     height: 40px;
   }
 }
+
+.item:hover .name { color: var(--stamp); }
