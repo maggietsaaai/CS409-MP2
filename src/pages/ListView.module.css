@@ -1,0 +1,183 @@
+.listView {
+  padding-top: 2rem;
+}
+
+/* ---------- Controls ---------- */
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.search {
+  flex: 1;
+  min-width: 220px;
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.field input,
+.field select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--ink);
+  border-radius: 0;
+  padding: 0.35rem 0;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+}
+
+.field input::placeholder {
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+.field select {
+  cursor: pointer;
+  padding-right: 0.5rem;
+}
+
+/* ---------- Tracklist ---------- */
+
+.listHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ink);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list li {
+  border-bottom: 1px solid rgba(30, 28, 24, 0.15);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 2.5rem 44px 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s ease;
+}
+
+.item:hover {
+  background: var(--paper-deep);
+}
+
+.number {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  color: var(--ink-faint);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.item:hover .number {
+  color: var(--stamp);
+}
+
+.thumb {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  background: var(--paper-deep);
+  filter: saturate(0.85);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.leader {
+  flex: 1;
+  min-width: 1.5rem;
+  border-bottom: 1px dotted var(--ink-faint);
+  transform: translateY(-0.3em);
+}
+
+.duration {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.sub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.listening {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  align-self: center;
+}
+
+.message {
+  padding: 3rem 0;
+  text-align: center;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 520px) {
+  .item {
+    grid-template-columns: 1.75rem 40px 1fr;
+    gap: 0.75rem;
+    padding: 0.7rem 0;
+  }
+  .thumb {
+    width: 40px;
+    height: 40px;
+  }
+}
