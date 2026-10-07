@@ -15,7 +15,6 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.masthead}>
-        <p className={styles.kicker}>Liner notes for your listening</p>
         <h1 className={styles.title}>Spotify Explorer</h1>
       </div>
 
@@ -64,7 +63,6 @@ function Header() {
 function Welcome() {
   return (
     <section className={styles.welcome}>
-      <p className={styles.welcomeKicker}>Side A · Your top songs</p>
       <h2 className={styles.welcomeTitle}>
         Every record comes with notes. <em>Here are yours.</em>
       </h2>
